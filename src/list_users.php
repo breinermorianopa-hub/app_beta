@@ -1,8 +1,14 @@
-<?php
-require("../config/database.php");
-
+<?php require ("../config/database.php");
+$sql_users = "
+    Select 
+        u.firstname ||' '||u.lastname as fullname,
+        u.email,u.mobile_phone
+        case
+            when u.status=true the 'Active' else 'Inactive'
+        End as status,  u.profile_photo
+        from users u
+        ";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,35 +17,27 @@ require("../config/database.php");
     <title>Document</title>
 </head>
 <body>
-    <table border = "1" align = "center">
+    <table border="1" align="center">
         <tr>
-            <th>Fullname </th>
-            <th>E-mail </th>
-            <th>Mobile phone </th>
-            <th>Status </th>
-            <th>photo </th>
-            <th>Options </th>
+            <th>Fullname</th>
+            <th>E_mail</th>
+            <th>Mobile_phone</th>
+            <th>Status</th>
+            <th>Photo</th>
+            <th>Options</th>
         </tr>
-        
         <tr>
-            <td>Peter Loza </dt>
-            <td>Peter@mail.com </dt>
-            <td>30090 </dt>
-            <td>Active </dt>
-            <td><img src = "profile_photo/avatar.png" width = "55" alt = "User photo">
-        </dt>
-       <td>
-        <a href = "#" >
-            <img src = "icons/edit.png"
-            width = "25" alt = "Edit user">
-</a>
-    &nbsp; &nbsp;
-    <a href = "#">
-        <img src = "icons/delete.png"
-        width = "25" alt = "delete user">
-</a>
-</dt>
+            <td>Peter loza</td>
+            <td>peter@mail.com</td>
+            <td>31542084</td>
+            <td>Active</td>
+            <td><img src="profile_photos/user_default.png" width="100" alt="User Photo"></td>
+            <td>
+                <a href="#"><img src="icons/edit.png" width="30" alt="Edit user"></a>
+            &nbsp;&nbsp;
+                <a href="#"><img src="icons/delete.png" width="30" alt="Delete user"></a>    
+            </td>
         </tr>
-
+    </table>
 </body>
 </html>

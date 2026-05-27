@@ -3,26 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register user</title>
-    <link rel="icon" type="image/png" href="icons/home.png">
+    <title>Register User</title>
+    <link rel="icon" type ="image/png" href="icons/home.png">
 </head>
-</head>
-<body bgcolor ="BCB9C7">
-    <table border="1" align="center"> 
-    <form name ="frm-user" action="signup.php" method ="post"
-   <tr> <label for="email">email</label><br></tr>  
-    <tr><input type="email" name="email"required><br></tr>  
-    <tr><label for="lastname">lastname</label><br></tr>  
-   <tr> <input type="text" name="lname"required><br></tr>  
-   <tr><label for="Firstname">Firstname</label><br></tr>  
-   <tr> <input type="text"name="fname"required><br></tr>  
-   <tr> <label for="">psswrd</label><br></tr>  
-    <tr><input type="psswrd" name="passwd"required><br></tr>  
-   <tr> <label for="passwd">password again</label><br></tr>  
-  <tr> <input type="password" name = "confir_password" required ><br></tr>  
-  <tr>  <tr><label for="mphone">mobile phone</label><br></tr>  
-  <tr><input type="number" name="mphone"required><br></tr>  
-    <button>Register</button> 
-    </tr></td> </table>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        padding-top: 80px;}
+    .container{
+       
+        border: 1px solid black;
+        padding: 20px;
+        
+    }
+</style>
+<body>
+    <div class="container">
+    <form name ="frm-user" action="signup.php" method="post">  
+        <label for="fname">First name</label><br>
+        <input type="text" name="fname"><br>
+        <label for="lname">Last name</label><br>
+        <input type="text" name="lname"><br>
+        <label for="email">Email</label><br>
+        <input type="email" name="email"><br>
+        <label for="password">Password</label><br>
+        <input type="password" name="password"><br>
+        <label for="confirm_password">Confirm Password</label><br>
+        <input type="password" name="confirm_password"><br>
+        <label for="mphone">Mobile phone</label><br>
+        <input type="number" name="mphone"><br><br>
+        <button>Register</button>
+    </div>
 </body>
 </html>
